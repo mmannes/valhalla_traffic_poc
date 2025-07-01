@@ -74,16 +74,17 @@ RUN cd valhalla_tiles; valhalla_ways_to_edges --config valhalla.json
 # Let's update the traffic for openstreetmap.org/way/257559973
 # Generate a csv with speeds for all edges
 COPY update_traffic.py valhalla_tiles/traffic/update_traffic.py
-RUN cd /valhalla_tiles/traffic; python3 update_traffic.py 257559973 /valhalla_tiles/valhalla_tiles/way_edges.txt
-
-# Move the csv file to the expected location in the tile hierarchy
-# All valhalla edges for this osm way id have the same tile id, so just get the first one from the mapping
-RUN cd /valhalla_tiles/traffic; \
-    edge_id=`grep 257559973 /valhalla_tiles/valhalla_tiles/way_edges.txt | cut -d ',' -f3`; \
-    mv traffic.csv `valhalla_traffic_demo_utils --get-traffic-dir $edge_id`
-
-# Add traffic information to the routing tiles
-RUN cd /valhalla_tiles; valhalla_add_predicted_traffic -t traffic --config valhalla.json
+COPY update_all_traffic.py valhalla_tiles/traffic/update_all_traffic.py
+#RUN cd /valhalla_tiles/traffic; python3 update_traffic.py 114749206 /valhalla_tiles/valhalla_tiles/way_edges.txt
+#
+## Move the csv file to the expected location in the tile hierarchy
+## All valhalla edges for this osm way id have the same tile id, so just get the first one from the mapping
+#RUN cd /valhalla_tiles/traffic; \
+#    edge_id=`grep 114749206 /valhalla_tiles/valhalla_tiles/way_edges.txt | cut -d ',' -f3`; \
+#    mv traffic.csv `valhalla_traffic_demo_utils --get-traffic-dir $edge_id`
+#
+## Add traffic information to the routing tiles
+#RUN cd /valhalla_tiles; valhalla_add_predicted_traffic -t traffic --config valhalla.json
 
 
 ###### Add live traffic information
