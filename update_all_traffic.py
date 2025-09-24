@@ -60,6 +60,50 @@ osm_way_ids = [
     480072828, # dona francisca
     1060382079,# dona francisca
     1060382080,# dona francisca
+
+    # cidade universitária, ilha do governador, rio de janeiro-rj
+    # ff~pj@tccnqAvIgHtDkDbEoEjD_E`LwMpAy@`Ao@bAcAr@w@b@u@dAcC^kAb@aBVkBNgCDwD?a@|@eCvAgCpBuB|x@cg@bDsBhi@g^te@k[zfAws@fLqIlCgAp@WlAa@bAOhAOfA?lAR|@p@fAjAxGrLxAbAbBf@|D|HrTx_@r`@xu@jK|LhDfCbFxCxFbBpGpAhHb@pG?hFQpFo@xMcCxZoTh^wV~AeA`JuFfXqPj[ySpvAo~@ROr@e@fq@mc@h_@qVri@}]tKeHpC~@~At@jA`Az@`AbQ`ZpLrSbf@f~@`[jl@|J`S|@tAhA`AtAd@tANvAArAa@hcAwr@ndA_o@xS_NrQaMv^_VlI_Gza@{Y
+    297286290,
+    794526575,
+    462223375,
+    462223375,
+    462223375,
+    25475931,
+    25475931,
+    734011311,
+    734011311,
+    25473053,
+    25473053,
+    25473053,
+    25473053,
+    25473053,
+    25473053,
+    799463836,
+    972948130,
+    785228934,
+    734011310,
+    952037577,
+    952037577,
+    952071914,
+    952071914,
+    952071914,
+    25464903,
+    25464903,
+    25464903,
+    25464903,
+    1342216224,
+    25464827,
+    25464827,
+    25464827,
+    1342231971,
+    1342231971,
+    91658324,
+    91658324,
+    25464828,
+    25464824,
+    25464824,
+    25464824,
+    25464824,
 ]
 
 qty_osm_way_ids = len(osm_way_ids)
